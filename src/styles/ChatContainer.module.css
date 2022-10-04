@@ -1,0 +1,14 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    align-items: flex-start;
+    background-color: #fff;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
