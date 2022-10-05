@@ -1,9 +1,6 @@
-
 import { FilterList } from "@mui/icons-material";
-
 import SidebarHeader from "./SidebarHeader";
 import SidebarForm from './SidebarForm';
-
 import './Sidebar.css';
 
 const Sidebar = () => {

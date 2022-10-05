@@ -1,7 +1,6 @@
 import { Search } from "@mui/icons-material";
 import { TextField } from "@mui/material";
 import '@fontsource/roboto';
-
 import './SidebarForm.css';
 
 const SidebarForm = () => {
