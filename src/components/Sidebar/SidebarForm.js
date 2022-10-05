@@ -2,12 +2,12 @@ import { Search } from "@mui/icons-material";
 import { TextField } from "@mui/material";
 import '@fontsource/roboto';
 
-import classes from '../../styles/Input.module.css';
+import './SidebarForm.css';
 
-const Input = () => {
+const SidebarForm = () => {
 
     return (
-        <div className={classes.searchBar}>
+        <form className='sidebar__form'>
             <Search />
             <TextField
                 sx={{ width: '65%' }}
@@ -15,8 +15,8 @@ const Input = () => {
                 placeholder="Search or start a new chat"
                 variant="standard"
             />
-        </div>
+        </form>
     )
 }
 
-export default Input;
+export default SidebarForm;

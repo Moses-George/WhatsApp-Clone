@@ -1,4 +1,4 @@
-.header {
+.sidebar__header {
     display: flex;
     justify-content: space-between;
     background-color: #eeebeb;
@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.icons-right {
+.icons__right {
     display: flex;
     column-gap: 2rem;
 }

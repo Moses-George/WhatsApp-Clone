@@ -1,4 +1,4 @@
-.chat-container {
+.sidebar {
     display: flex;
     flex-direction: column;
     row-gap: .5rem;
@@ -6,7 +6,7 @@
     background-color: #fff;
 }
 
-.search {
+.sidebar__search {
     display: flex;
     justify-content: space-around;
     align-items: center;

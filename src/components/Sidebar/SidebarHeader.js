@@ -1,14 +1,15 @@
 import { AccountCircle, Add, DonutLarge, MoreHoriz } from "@mui/icons-material";
 
-import classes from '../../styles/Header.module.css';
+import './SidebarHeader.css';
 
-const Header = () => {
+const SidebarHeader = () => {
+
     return (
-        <header className={classes.header}>
-            <div className={classes.account}>
+        <header className='sidebar__header'>
+            <div className='account'>
                 <AccountCircle sx={{ fontSize: '50px', color: "#bfbfbf" }} />
             </div>
-            <div className={classes['icons-right']} >
+            <div className='icons__right' >
                 <DonutLarge sx={{color: '#bfbfbf'}} />
                 <Add sx={{color: '#bfbfbf'}} />
                 <MoreHoriz sx={{color: '#bfbfbf'}} />
@@ -17,4 +18,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default SidebarHeader;

@@ -1,8 +1,8 @@
-import classes from '../../styles/Chat.module.css';
+import './Chat.css'
 
 const Chat = () => {
 
-    return <div className={classes.chat}></div>
+    return <div className='chat'></div>
 }
 
 export default Chat;

@@ -1,15 +1,15 @@
 import React from "react";
 
-import classes from '../styles/Main.module.css';
+import './Main.css';
 
 import Chat from './Chat/Chat';
 
-import ChatsContainer from "./ChatContainer/ChatsContainer";
+import Sidebar from './Sidebar/Sidebar';
 
 const Main = () => {
     return (
-        <main className={classes.main}>
-            <ChatsContainer />
+        <main className='main'>
+            <Sidebar />
             <Chat />
         </main>
     )
