@@ -1,0 +1,13 @@
+.sidebar__header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeebeb;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.icons__right {
+    display: flex;
+    column-gap: 2rem;
+}

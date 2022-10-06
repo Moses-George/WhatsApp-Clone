@@ -1,0 +1,8 @@
+.sidebar__form {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    background-color: #eeebeb;
+}
