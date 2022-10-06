@@ -1,7 +1,6 @@
 .sidebar {
     display: flex;
     flex-direction: column;
-    row-gap: .5rem;
     align-items: flex-start;
     background-color: #fff;
 }
@@ -10,5 +9,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: .7rem 0;
     width: 100%;
+    border-bottom: 1.5px solid gray;
 }

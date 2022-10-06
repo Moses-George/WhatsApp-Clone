@@ -1,9 +1,9 @@
 .sidebar__header {
     display: flex;
     justify-content: space-between;
-    background-color: #eeebeb;
+    background-color: #e6f3dc;
     align-items: center;
-    padding: 1rem;
+    padding: .4rem .7rem;
     width: 100%;
 }
 

@@ -1,13 +1,13 @@
 import React from "react";
 import './Main.css';
-import Chat from './Chat/Chat';
+import ChatBar from './ChatBar/ChatBar';
 import Sidebar from './Sidebar/Sidebar';
 
 const Main = () => {
     return (
         <main className='main'>
             <Sidebar />
-            <Chat />
+            <ChatBar />
         </main>
     )
 }
