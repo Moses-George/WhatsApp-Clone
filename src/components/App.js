@@ -1,10 +1,15 @@
-import Main from './Main';
+import './App.css';
+import Sidebar from './Sidebar/Sidebar';
+import ChatBar from './ChatBar/ChatBar';
 
 
 const App = () => {
 
     return (
-        <Main />
+        <main className='main'>
+            <Sidebar />
+            <ChatBar />
+        </main>
     )
 }
 
