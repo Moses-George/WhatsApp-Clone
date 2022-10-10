@@ -1,0 +1,17 @@
+.chatBar__footer {
+    display: grid;
+    grid-template-columns: 1fr 8.3fr .7fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.chatBar__form {
+    width: 100%;
+    padding-top: .7rem;
+}
+
+.chatBar__footer__icon-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: .5rem;
+}

@@ -9,7 +9,7 @@ const SidebarForm = () => {
         <form className='sidebar__form'>
             <Search />
             <TextField
-                sx={{ width: '65%' }}
+                sx={{ width: '100%' }}
                 id="standard-basics"
                 placeholder="Search or start a new chat"
                 variant="standard"

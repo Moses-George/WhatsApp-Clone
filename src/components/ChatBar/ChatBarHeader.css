@@ -1,0 +1,26 @@
+.chatBar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .8rem;
+}
+
+.chatBar__header__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.chatBar__header__dialogue {
+    border-right: 1px solid gray;
+    padding-right: 1.5rem;
+}
+
+.chatBar__header__right > div:nth-child(2) {
+    padding-left: 1.5rem;
+}
+
+.chatBar__header__right > div {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+}
