@@ -1,0 +1,63 @@
+.sidebar__rooms {
+    display: grid;
+    width: 100%;
+}
+
+.add__new__room {
+    padding: 1rem;
+    background-color: #4b7a27;
+    width: 100%;
+}
+
+.add__new__room button {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    padding: .5rem 1rem;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #36571d;
+}
+
+.add__new__room button:hover {
+    background-color: rgb(0,0,0,0.5);
+}
+
+.rooms {
+    display: grid;
+    row-gap: .5rem;
+    padding: .5rem  .7rem 0 .7rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-height: 23rem;
+}
+
+.rooms::-webkit-scrollbar {
+    display: none;
+    width: 12px;
+}
+
+.rooms::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.rooms::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 20px;
+    border: 3px solid #fff;
+}
+
+.scroll::-webkit-scrollbar {
+    display: block;
+}
+
+.scroll {
+    scrollbar-width: thin !important;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .rooms {
+        overflow-y: overlay
+        }
+}
