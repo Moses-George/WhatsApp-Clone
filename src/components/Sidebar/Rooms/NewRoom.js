@@ -1,15 +1,10 @@
-import React, { useMemo } from "react";
+import React from "react";
 import './NewRoom.css';
 // import '@fontsource/roboto';
 
-const NewRoom = ({name, createdAt}) => {
+const NewRoom = ({name, createdAt, avatarBgColor}) => {
 
     const profileName = name.split(" ").map(roomName=> roomName[0]).join('');
-
-    const profileBackgroundColor = useMemo(()=> {
-        const colors = ["pink", "lawngreen", "cyan", "orange", "purple", "gray", "blue", "green"];
-        return colors[Math.floor(Math.random()*colors.length)]
-    }, []);
 
     const day = new Date(createdAt * 1000).getDay();
     const month = new Date(createdAt * 1000).getMonth();
@@ -17,7 +12,7 @@ const NewRoom = ({name, createdAt}) => {
 
     return (
         <div className="new__room">
-            <div className="new__room__avatar" style={{backgroundColor: profileBackgroundColor}} >
+            <div className="new__room__avatar" style={{backgroundColor: avatarBgColor}} >
                 <p>{profileName}</p>
             </div>
             <div className="new__room__chat">

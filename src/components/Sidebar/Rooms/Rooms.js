@@ -9,6 +9,8 @@ const Rooms = () => {
     const [rooms, setRooms] = useState([]);
     const [isScrolling, setIsScrolling] = useState(false);
 
+    const colors = ["pink", "lawngreen", "cyan", "orange", "purple", "gray", "blue", "green", "yellow", "crimson"];
+
     const handleSubmit = async () => {
         const roomName = prompt("Add a room");
 
@@ -18,6 +20,7 @@ const Rooms = () => {
             try {
                 await addDoc(collection(db, 'rooms'), {
                     roomName: roomName,
+                    avatarBgColor: colors[Math.floor(Math.random() * colors.length)],
                     created: Timestamp.now()
                 });
             } catch (err) {
@@ -26,18 +29,19 @@ const Rooms = () => {
         }
     }
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const q = query(collection(db, 'rooms'), orderBy('created', 'desc'));
-            const querySnapshot = await getDocs(q);
+    const fetchData = async () => {
+        const q = query(collection(db, 'rooms'), orderBy('created', 'desc'));
+        const querySnapshot = await getDocs(q);
 
-            setRooms(querySnapshot.docs.map(doc => ({
-                id: doc.id,
-                data: doc.data()
-            })));
-        }
+        setRooms(querySnapshot.docs.map(doc => ({
+            id: doc.id,
+            data: doc.data()
+        })));
+    }
+
+    useEffect(() => {
         fetchData();
-    }, [])
+    }, [rooms]);
 
     const handleMouseOver = useCallback(() => {
         setIsScrolling(true);
@@ -59,6 +63,7 @@ const Rooms = () => {
                     key={room.id}
                     id={room.id}
                     name={room.data.roomName}
+                    avatarBgColor={room.data.avatarBgColor}
                     createdAt={room.data.created.seconds} />)}
             </div>
         </div>
