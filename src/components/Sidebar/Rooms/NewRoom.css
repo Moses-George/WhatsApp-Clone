@@ -1,0 +1,29 @@
+.new__room {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    align-items: center;
+}
+
+.new__room__avatar {
+    height: 3.2rem;
+    width: 3.2rem;
+    text-align: center;
+    font-weight: 550;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 50%;
+}
+
+.new__room__chat h4 {
+    margin-bottom: 0;
+}
+
+.new__room__chat p {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.new__room__chat {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
