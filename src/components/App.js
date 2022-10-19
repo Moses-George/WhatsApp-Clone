@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Sidebar from './Sidebar/Sidebar';
 import ChatBar from './ChatBar/ChatBar';
-import ChatBarBody from './ChatBar/ChatBarBody';
 
 
 const App = () => {
@@ -12,7 +11,7 @@ const App = () => {
             <Sidebar />
             <Routes>
                 <Route path='/' element={<ChatBar />} >
-                    <Route path='rooms/:roomId' element={<ChatBarBody />} />
+                    <Route path='rooms/:roomId' element={<ChatBar />} />
                 </Route>
             </Routes>
         </main>
