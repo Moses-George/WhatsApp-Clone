@@ -20,3 +20,38 @@ body {
   align-items: center;
 }
 
+.scroller {
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+  width: 12px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+  border: 3px solid #fff;
+}
+
+.scroll::-webkit-scrollbar {
+  display: block;
+}
+
+.scroll {
+  scrollbar-width: thin !important;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .scroller {
+      overflow-y: overlay
+      }
+}
+
