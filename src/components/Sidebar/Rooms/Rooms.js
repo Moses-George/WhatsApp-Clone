@@ -1,13 +1,14 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { db } from '../../../firebase';
-import { addDoc, collection, Timestamp, query, orderBy, getDocs } from "firebase/firestore";
+import { addDoc, collection, Timestamp,  onSnapshot } from "firebase/firestore";
 import './Rooms.css';
 import NewRoom from "./NewRoom";
+import useScroll from "../../../hooks/useScroll";
 
 const Rooms = () => {
 
     const [rooms, setRooms] = useState([]);
-    const [isScrolling, setIsScrolling] = useState(false);
+    const {isScrolling, handleMouseOver, handleMouseOut} = useScroll()
 
     const colors = ["pink", "lawngreen", "cyan", "orange", "purple", "gray", "blue", "green", "yellow", "crimson"];
 
@@ -29,34 +30,23 @@ const Rooms = () => {
         }
     }
 
-    const fetchData = async () => {
-        const q = query(collection(db, 'rooms'), orderBy('created', 'desc'));
-        const querySnapshot = await getDocs(q);
-
-        setRooms(querySnapshot.docs.map(doc => ({
-            id: doc.id,
-            data: doc.data()
-        })));
-    }
-
     useEffect(() => {
-        fetchData();
-    }, [rooms]);
-
-    const handleMouseOver = useCallback(() => {
-        setIsScrolling(true);
+        const unsubscribe = onSnapshot(collection(db, 'rooms'), (querySnapshot) => {
+            setRooms(querySnapshot.docs.map(doc => ({
+                id: doc.id,
+                data: doc.data()
+            })));
+        });
+        return () => unsubscribe();
     }, []);
 
-    const handleMouseOut = useCallback(() => {
-        setIsScrolling(false);
-    }, []);
 
     return (
         <div className="sidebar__rooms">
             <div className="add__new__room">
                 <button onClick={handleSubmit}>Add new chat</button>
             </div>
-            <div className={`rooms ${isScrolling && "scroll"}`}
+            <div className={`rooms scroller ${isScrolling && "scroll"}`}
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut} >
                 {rooms.map(room => <NewRoom

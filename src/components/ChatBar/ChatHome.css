@@ -1,0 +1,6 @@
+.chat__home__bg {
+    background-image: url("../../Assets/images/ChatHome-Bg.jpg");
+    background-size: cover;
+    width: 100%;
+    justify-self: center;
+}

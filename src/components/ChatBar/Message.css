@@ -1,0 +1,22 @@
+.message {
+    background-color: transparent;
+    width: 14rem;
+    max-height: fit-content;
+}
+
+.message p {
+    margin: 0;
+}
+
+.message__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: .3rem;
+    width: 14rem;
+    max-width: 15rem;
+    word-break: break-all;
+    color: #fff;
+    background-color: #075e54;
+    padding: .8rem 1rem;
+    border-radius: 20px 3px 20px 30px;
+}
